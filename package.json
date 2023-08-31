@@ -1,17 +1,43 @@
 {
   "name": "vite-plugin-svg2font",
   "version": "1.0.0",
+  "keywords": [
+    "vite-plugin",
+    "svg2font"
+  ],
   "description": "vite-plugin svg2font",
-  "main": "dist/index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/scrapooo/vite-plugin-svg2font.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:scrapooo/vite-plugin-svg2font.git"
   },
-  "keywords": [],
+  "main": "dist/svg2font.js",
+  "types": "dist/svg2font.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/svg2font.js",
+      "require": "./dist/svg2font.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsc -w -d",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -d",
+    "build:esm": "tsc -m es2020 --outDir dist/esm",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.5.1"
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "svgtofont": "^4.0.0",

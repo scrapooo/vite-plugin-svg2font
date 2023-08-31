@@ -12,10 +12,10 @@
     "url": "git@github.com:scrapooo/vite-plugin-svg2font.git"
   },
   "main": "dist/svg2font.js",
-  "types": "dist/svg2font.d.ts",
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/svg2font.d.ts",
       "import": "./dist/esm/svg2font.js",
       "require": "./dist/svg2font.js"
     }

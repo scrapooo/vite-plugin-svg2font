@@ -5,8 +5,7 @@
     "sourceMap": false,
     "types": ["node"],
     "outDir": "./dist",
-    "esModuleInterop": true,
-    "moduleResolution": "Node16"
+    "esModuleInterop": true
   },
   "include": ["src"]
 }
